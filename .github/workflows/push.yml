@@ -14,10 +14,27 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - uses: actions/checkout@v3
+    - name: Checkout IconPark
+      uses: actions/checkout@v3
       with:
         repository: 'bytedance/IconPark'
         path: 'bytedance-iconpark'
+
+    - name: Find and Replace fill=#2F88FF
+      uses: jacobtomlinson/gha-find-replace@v2
+      with:
+        include: 'bytedance-iconpark/**.svg'
+        find: 'fill="#2F88FF"'
+        replace: 'fill="none"'
+        regex : false
+
+    - name: Find and Replace stroke=black
+      uses: jacobtomlinson/gha-find-replace@v2
+      with:
+        include: 'bytedance-iconpark/**.svg'
+        find: 'stroke="black"'
+        replace: 'stroke="currentColor"'
+        regex : false
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
