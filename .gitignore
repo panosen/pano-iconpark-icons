@@ -1,0 +1,5 @@
+node_modules/
+.vs/
+bootstrap-icons/build/
+bootstrap-icons/*.js
+bootstrap-icons/*.ts

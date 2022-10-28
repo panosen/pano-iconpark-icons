@@ -1,6 +1,7 @@
 # pano-iconpark-icons
+angular iconpark icons
 
-This package providers *.ts  from *.svg of `bytedance/IconPark`.
+This repository is to build *.ts files for angular.
 
 Source of all *.svg is from `https://github.com/bytedance/IconPark`.
 

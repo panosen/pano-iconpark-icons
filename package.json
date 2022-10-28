@@ -1,0 +1,26 @@
+{
+  "name": "pano-iconpark-icons",
+  "version": "0.0.1",
+  "scripts": {
+    "generate-icons": "svg-to-ts-files"
+  },
+  "svg-to-ts": {
+    "srcFiles": [
+      "./bytedance-iconpark/source/*/*.svg"
+    ],
+    "outputDirectory": "./iconpark-icons",
+    "interfaceName": "IconparkIcon",
+    "typeName": "IconparkIconName",
+    "prefix": "iconpark",
+    "svgoConfig": {
+      "plugins": [ "cleanupAttrs" ]
+    },
+    "modelFileName": "iconpark-icons",
+    "compileSources": true,
+    "iconsFolderName":"icons"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "svg-to-ts": "^8.8.1"
+  }
+}
